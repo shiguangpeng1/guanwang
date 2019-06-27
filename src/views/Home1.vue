@@ -66,9 +66,10 @@
             <h1 class="title">为您量身打造原生APP</h1>
             <h3 class="sub_title">我们认真服务好每一位客户，让客户满意是我们的宗旨</h3>
             <div class="clear">
-                <div class="item" v-for="i in 6" :key="i">
+                <div @mouseenter="enter()" @mouseleave="leave()" :style="{'background-color':sort[0].bg}" class="item" v-for="i in 6" :key="i">
                     <div>
-                        <i class="iconfont icon-canyin"></i>
+                        <img v-if="sort[0].act" :src="sort[0].img_foc" alt="">
+                        <img v-else :src="sort[0].img" alt="">
                         <p>餐饮外卖</p>
                         <p class="sub">餐饮展示、美食展示、定位就餐、用餐评价、</p>
                     </div>
@@ -208,24 +209,14 @@
                         margin: auto;
                         background-color: #fff;
                         padding: 30px 0;
-                        transition: all .5s;
-                        .iconfont{
-                            font-size: 50px;
-                            color:#F0A228;
+
+                        img {
+                            width: 15%;
                         }
 
                         .sub {
                             color: #b4b4b4;
                             font-size: 14px;
-                        }
-                    }
-                    div:hover{
-                        background-color: #f0a228;
-                        .iconfont{
-                            color:#fff;
-                        }
-                        p{
-                            color:#fff;
                         }
                     }
                 }
