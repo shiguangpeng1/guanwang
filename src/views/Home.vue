@@ -60,7 +60,6 @@
                     </div>
                 </div>
             </div>
-
         </div>
         <div class="sort">
             <h1 class="title">为您量身打造原生APP</h1>
@@ -76,6 +75,38 @@
                 </div>
             </div>
         </div>
+        <div class="about">
+            <div>
+                <h2>我们是设计师、工程师、梦想者<br>也是您的用户体验专家</h2>
+                <p>透视互联专注于APP定制研发及高校就业管理系统为业务核心。致力于为企事业单位、学校、政府机构提供信息化服务。服务范围包括：高校就业管理系统、移动APP、微信定制开发、网站建设、SME托管运营、超高性能纤维混凝土、医院自助终端机、远程试衣等。目前与多家企事业单位保持良好的合作关系。我们的价值与宗旨是为用户和客户...</p>
+                <router-link class="about_more" to="/">了解更多</router-link>
+            </div>
+
+        </div>
+        <div class="news">
+            <h1 class="title">新闻动态</h1>
+            <h3 class="sub_title">团队活动&nbsp;/&nbsp;更新案例&nbsp;/&nbsp;项目动态</h3>
+            <div>
+                <div>
+                    <img src="@/assets/demo/new.jpg" alt="">
+                </div>
+                <div class="right">
+                    <div class="act">NEWS 新闻咨询</div>
+                    <div>NEWS 新闻咨询</div>
+                    <div>NEWS 新闻咨询</div>
+                    <div>NEWS 新闻咨询</div>
+                    <div>NEWS 新闻咨询</div>
+                    <div>NEWS 新闻咨询</div>
+                </div>
+            </div>
+        </div>
+        <div class="partner">
+            <h1 class="title">他们选择了透视互联</h1>
+            <h3 class="sub_title">团队活动&nbsp;/&nbsp;更新案例&nbsp;/&nbsp;项目动态</h3>
+            <div>
+
+            </div>
+        </div>
     </div>
 </template>
 
@@ -84,7 +115,6 @@
     export default {
         data() {
             return {
-                title: 'aaaa',
                 sort: [
                     {
                         img: require("../assets/demo/canyin.png"),
@@ -227,6 +257,79 @@
                         p{
                             color:#fff;
                         }
+                    }
+                }
+            }
+        }
+        .about{
+            background-color: rgba(0,0,0,.5);
+            padding: 40px 0;
+            >div{
+                width: 1200px;
+                margin: auto;
+                h2{color:#fff}
+                >p{
+                    width: 960px;
+                    margin: auto;
+                    text-align: left;
+                    text-indent: 2em;
+                    color:#fff;
+                }
+                .about_more{
+                    display: block;
+                    margin: 40px auto 0;
+                    width: 100px;
+                    height: 30px;
+                    -webkit-border-radius: 60px;
+                    -moz-border-radius: 60px;
+                    border-radius: 60px;
+                    border:2px solid #fff;
+                    color: #fff;
+                    font-size: 16px;
+                    line-height: 32px;
+                    text-decoration: none;
+                }
+            }
+        }
+        .news{
+            .title {
+                color: #417ee4;
+            }
+
+            .sub_title {
+                color: #999999;
+            }
+            >div{
+                margin: 0 auto 60px;
+                width: 1200px;
+                height: 300px;
+                >div{
+                    float: left;
+                    width: 590px;
+                }
+                .right{
+
+                    float: right;
+                    div{
+                        height: 50px;
+                        line-height: 50px;
+                        text-align: left;
+                        padding: 0 20px;
+                        box-sizing: border-box;
+                        border: 1px solid #ccc;
+                        border-bottom: none;
+                        transition: all .3s;
+                    }
+                    div:last-child{
+                        border-bottom: 1px solid #ccc;
+                    }
+                    div.act{
+                        background-color: #417ee4;
+                        color:#fff;
+                    }
+                    div:hover{
+                        background-color: #417ee4;
+                        color:#fff;
                     }
                 }
             }
